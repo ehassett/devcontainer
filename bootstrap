@@ -1,0 +1,59 @@
+#!/bin/bash -e
+
+GO_VERSION="1.16.4"
+TERRAFORM_VERSION="1.0.0"
+
+# Install Dependencies
+apt-get update && apt-get upgrade -y
+apt-get install -y \
+  apt-transport-https \
+  autoconf \
+  automake \
+  bison \
+  build-essential \
+  ca-certificates \
+  curl \
+  git \
+  gnupg \
+  gnupg-agent \
+  gpg \
+  libc6-dev \
+  libssl-dev \
+  libtool \
+  libxml2-dev \
+  libyaml-dev \
+  openssl \
+  silversearcher-ag \
+  software-properties-common \
+  tree \
+  unzip \
+  vim \
+  zlib1g \
+  zlib1g-dev \
+  zsh
+
+# Install Go
+curl -L -o /tmp/go$GO_VERSION.tar.gz https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz
+tar -C /usr/local -xzf /tmp/go$GO_VERSION.tar.gz
+rm /tmp/go$GO_VERSION.tar.gz
+export PATH="$PATH:/usr/local/go/bin"
+
+# Install Oh My Zsh
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
+
+# Install git-chglog
+go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
+
+# Install Terraform
+wget -q -O - https://raw.githubusercontent.com/ethanhassett/tfvm/main/install.sh | bash
+export PATH="$PATH:$HOME/.tfvm/bin"
+tfvm install $TERRAFORM_VERSION
+tfvm use $TERRAFORM_VERSION
+
+# Move files
+mkdir -p ~/.oh-my-zsh/themes && mv /tmp/erhbg.zsh-theme ~/.oh-my-zsh/themes/erhbg.zsh-theme
+mv /tmp/.zshrc ~/.zshrc
+mkdir -p ~/.dir_colors && mv /tmp/dircolors.256darksolarized ~/.dir_colors/dircolors.256darksolarized
+
+# Make Repo dir
+mkdir $HOME/Repos
