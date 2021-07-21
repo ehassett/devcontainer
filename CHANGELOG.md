@@ -1,4 +1,12 @@
 
+<a name="v1.1.1"></a>
+## [v1.1.1](https://github.com/ethanhassett/devcontainer/compare/v1.1.0...v1.1.1) - 2021-07-21
+
+### Revert
+
+- d5e8d27 feat: Add ssh server to container
+
+
 <a name="v1.1.0"></a>
 ## [v1.1.0](https://github.com/ethanhassett/devcontainer/compare/v1.0.2...v1.1.0) - 2021-07-21
 
