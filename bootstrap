@@ -22,7 +22,6 @@ apt-get install -y \
   libtool \
   libxml2-dev \
   libyaml-dev \
-  openssh-server \
   openssl \
   silversearcher-ag \
   software-properties-common \
