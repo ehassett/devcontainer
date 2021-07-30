@@ -1,4 +1,12 @@
 
+<a name="v1.2.0"></a>
+## [v1.2.0](https://github.com/ethanhassett/devcontainer/compare/v1.1.1...v1.2.0) - 2021-07-30
+
+### Feat
+
+- Add python and update README
+
+
 <a name="v1.1.1"></a>
 ## [v1.1.1](https://github.com/ethanhassett/devcontainer/compare/v1.1.0...v1.1.1) - 2021-07-21
 
