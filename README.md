@@ -19,8 +19,7 @@ A more full-featured `.devcontainer.json` looks like this:
 	  "hashicorp.terraform",
     "golang.go",
     "ms-python.python",
-	  "qcz.text-power-tools",
-    "monokai.theme-monokai-pro-vscode"
+	  "qcz.text-power-tools"
   ],
   "mounts": ["source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"],
   "workspaceMount": "source=${localWorkspaceFolder},target=/root/Repos,type=bind,consistency=delegated",
