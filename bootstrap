@@ -54,6 +54,12 @@ tfvm use $TERRAFORM_VERSION
 # Install Python 3.9
 apt-get install -y python3.9 python3.9-devel
 
+# Install AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip -q /tmp/awscliv2.zip -d /tmp
+/tmp/aws/install
+rm -rf /tmp/aws /tmp/awscliv2.zip
+
 # Move files
 mkdir -p ~/.oh-my-zsh/themes && mv /tmp/erhbg.zsh-theme ~/.oh-my-zsh/themes/erhbg.zsh-theme
 mv /tmp/.zshrc ~/.zshrc
