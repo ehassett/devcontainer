@@ -1,4 +1,12 @@
 
+<a name="v1.3.0"></a>
+## [v1.3.0](https://github.com/ethanhassett/devcontainer/compare/v1.2.0...v1.3.0) - 2021-08-06
+
+### Feat
+
+- Add AWS CLI to container
+
+
 <a name="v1.2.0"></a>
 ## [v1.2.0](https://github.com/ethanhassett/devcontainer/compare/v1.1.1...v1.2.0) - 2021-07-30
 
