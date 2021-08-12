@@ -1,5 +1,3 @@
-cd ~
-
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME=erhbg
 export TERM=xterm-256color
