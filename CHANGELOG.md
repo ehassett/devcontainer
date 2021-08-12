@@ -1,4 +1,12 @@
 
+<a name="v1.3.1"></a>
+## [v1.3.1](https://github.com/ethanhassett/devcontainer/compare/v1.3.0...v1.3.1) - 2021-08-12
+
+### Fix
+
+- Remove `cd ~` from .zshrc
+
+
 <a name="v1.3.0"></a>
 ## [v1.3.0](https://github.com/ethanhassett/devcontainer/compare/v1.2.0...v1.3.0) - 2021-08-06
 
