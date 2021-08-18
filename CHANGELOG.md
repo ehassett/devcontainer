@@ -1,4 +1,12 @@
 
+<a name="v1.3.2"></a>
+## [v1.3.2](https://github.com/ethanhassett/devcontainer/compare/v1.3.1...v1.3.2) - 2021-08-18
+
+### Fix
+
+- Add python distutils
+
+
 <a name="v1.3.1"></a>
 ## [v1.3.1](https://github.com/ethanhassett/devcontainer/compare/v1.3.0...v1.3.1) - 2021-08-12
 
