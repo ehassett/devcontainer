@@ -52,7 +52,7 @@ tfvm install $TERRAFORM_VERSION
 tfvm use $TERRAFORM_VERSION
 
 # Install Python 3.9
-apt-get install -y python3.9 python3.9-devel
+apt-get install -y python3.9 python3.9-devel python3-distutils
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
