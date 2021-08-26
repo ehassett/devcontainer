@@ -27,27 +27,26 @@ alias ud="sudo apt update && sudo apt upgrade -y"
 alias tf="terraform"
 alias tfa="terraform apply"
 
-# p(rojects) function
-compctl -K _p p
-
-_p() {
-  local word words completions
-  read -cA words
-  word="${words[2]}"
-
-  completions="$(ls $REPO_DIR/)"
-
-  reply=("${(ps:\n:)completions}")
+# tf_prompt_info function
+## Outputs the current Terraform workspace if .terraform exists
+function tf_prompt_info {
+  if [[ -d ./.terraform ]]; then
+    echo "tf:($(terraform workspace show))"
+  else
+    echo ""
+  fi
 }
 
-function p {
-  if [[ -d $REPO_DIR/$1 ]]; then
-    cd $REPO_DIR/$1
+# prompt_info function
+## Wrapper function for zsh prompt info
+function prompt_info {
+  if [[ -z $1 ]]; then
+    echo "%{\e[0;36m%}$2"
+  elif [[ -z $2 ]]; then
+    echo "%{\e[0;36m%}$1"
   else
-    echo "ERROR: $REPO_DIR/$1 does not exist"
-    return 1
+    echo "%{\e[0;36m%}$1%{\e[1;91m%}|%{\e[0;36m%}$2"
   fi
-  clear
 }
 
 # Add tfvm to PATH
