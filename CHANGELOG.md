@@ -1,4 +1,12 @@
 
+<a name="v1.4.0"></a>
+## [v1.4.0](https://github.com/ethanhassett/devcontainer/compare/v1.3.2...v1.4.0) - 2021-08-26
+
+### Feat
+
+- Add Terraform workspace to zsh prompt
+
+
 <a name="v1.3.2"></a>
 ## [v1.3.2](https://github.com/ethanhassett/devcontainer/compare/v1.3.1...v1.3.2) - 2021-08-18
 
