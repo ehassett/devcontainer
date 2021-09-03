@@ -1,4 +1,12 @@
 
+<a name="v1.5.2"></a>
+## [v1.5.2](https://github.com/ethanhassett/devcontainer/compare/v1.5.1...v1.5.2) - 2021-09-03
+
+### Fix
+
+- Re-add wget
+
+
 <a name="v1.5.1"></a>
 ## [v1.5.1](https://github.com/ethanhassett/devcontainer/compare/v1.5.0...v1.5.1) - 2021-09-03
 
