@@ -1,11 +1,11 @@
 #!/bin/bash -e
 
 GO_VERSION="1.16.4"
-TERRAFORM_VERSION="1.0.0"
+TERRAFORM_VERSION="1.0.5"
 
 # Install Dependencies
 apt-get update && apt-get upgrade -y
-apt-get install -y \
+sudo apt-get install -y \
   apt-transport-https \
   autoconf \
   automake \
@@ -14,23 +14,19 @@ apt-get install -y \
   ca-certificates \
   curl \
   git \
-  gnupg \
-  gnupg-agent \
+  gnupg gnupg-agent \
   gpg \
-  libc6-dev \
-  libssl-dev \
-  libtool \
-  libxml2-dev \
-  libyaml-dev \
+  keychain \
+  libc6-dev libssl-dev libtool libxml2-dev libyaml-dev \
   openssl \
+  python3 python3-pip \
   silversearcher-ag \
   software-properties-common \
+  tmux \
   tree \
   unzip \
   vim \
-  wget \
-  zlib1g \
-  zlib1g-dev \
+  zlib1g zlib1g-dev \
   zsh
 
 # Install Go
@@ -45,14 +41,22 @@ curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/instal
 # Install git-chglog
 go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
 
+# Install pre-commit
+pip install pre-commit
+
 # Install Terraform
 wget -q -O - https://raw.githubusercontent.com/ethanhassett/tfvm/main/install.sh | bash
 export PATH="$PATH:$HOME/.tfvm/bin"
 tfvm install $TERRAFORM_VERSION
 tfvm use $TERRAFORM_VERSION
 
-# Install Python 3.9
-apt-get install -y python3.9 python3.9-devel python3-distutils
+# Install terraform-docs
+GO111MODULE="on" go get github.com/terraform-docs/terraform-docs@v0.15.0
+
+# Install Packer
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install -y packer
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
