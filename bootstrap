@@ -26,6 +26,7 @@ apt-get install -y \
   tree \
   unzip \
   vim \
+  wget \
   zlib1g zlib1g-dev \
   zsh
 
