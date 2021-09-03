@@ -1,4 +1,12 @@
 
+<a name="v1.5.0"></a>
+## [v1.5.0](https://github.com/ethanhassett/devcontainer/compare/v1.4.0...v1.5.0) - 2021-09-03
+
+### Feat
+
+- Add more packages (terraform-docs, packer)
+
+
 <a name="v1.4.0"></a>
 ## [v1.4.0](https://github.com/ethanhassett/devcontainer/compare/v1.3.2...v1.4.0) - 2021-08-26
 
