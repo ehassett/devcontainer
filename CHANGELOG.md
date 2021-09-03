@@ -1,4 +1,12 @@
 
+<a name="v1.5.1"></a>
+## [v1.5.1](https://github.com/ethanhassett/devcontainer/compare/v1.5.0...v1.5.1) - 2021-09-03
+
+### Fix
+
+- Remove sudo from bootstrap script
+
+
 <a name="v1.5.0"></a>
 ## [v1.5.0](https://github.com/ethanhassett/devcontainer/compare/v1.4.0...v1.5.0) - 2021-09-03
 
