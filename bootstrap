@@ -72,3 +72,6 @@ mkdir -p ~/.dir_colors && mv /tmp/dircolors.256darksolarized ~/.dir_colors/dirco
 
 # Make Repo dir
 mkdir $HOME/Repos
+
+# Change default shell
+chsh -s /bin/zsh
